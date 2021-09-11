@@ -1,0 +1,145 @@
+@import './assets/mixins';
+@import './assets/vars';
+
+
+
+.footer{
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    &__top{
+        background-color: $bgColorFooter;
+    }
+
+    &__inner{
+        @include flex(flex,row,space-between,center);
+        padding: 60px 0 80px;
+    }
+
+    &__left{
+        width: 540px;
+    }
+    &__left-title{
+        font-family: "Monserat", sans-serif;
+        @include text(16px,800,23px,$colorTitle);
+    }
+
+    &__left-text{
+        @include text(16px,400,27px,$textColor);
+        margin-top: 15px;
+    }
+
+    &__left-email{
+        @include text(14px,600,28px,$colorTitle);
+        padding-left:30px;
+        margin-top: 20px;
+        display: block;
+        position: relative;
+        &::before{
+            content: "";
+            position: absolute;
+            background-image: url('./../img/mail.svg');
+            background-repeat: no-repeat;
+            background-size: 100%;
+            width: 16px;
+            height: 16px;
+            top: 8px;
+            left: 0;
+        }
+    }
+
+    &__form{
+        margin-top: 25px;
+        display: flex;
+    }
+
+    &__form-input{
+        padding: 5px 10px 5px 20px;
+        margin-right: 10px;
+        border-radius: 21px;
+        width: 100%;
+        height: 30px;
+        background-color: transparent;
+        border: 1px solid rgba($colorTitle, .7);
+        &::placeholder{
+            font-family: 'Open Sans', sans-serif;
+            @include text(16px,400,28px,$textColorLight);
+        }
+    }
+
+    &__form-btn{
+        background-color: $colorTitle;
+        border-radius: 21px;
+        color: $primaryColor;
+        padding: 5px 10px;
+        min-width: 160px;
+    }
+
+
+
+    &__right{
+        @include flex(flex,row,center,flex-start);
+    }
+
+    &__social{
+        margin-right: 185px;
+    }
+
+    &__socil-item{
+        margin-top: 15px;
+        &:nth-child(1){
+            margin-top: 0;
+        }
+        padding-left: 30px;
+        position: relative;
+        &::before{
+            position: absolute;
+            content: "";
+            background-image: url('./../img/social/facebook.svg');
+            background-repeat: no-repeat;
+            background-size: 100%;
+            width: 16px;
+            height: 18px;
+            top: 7px;
+            left: 0;
+        }
+        &:nth-child(2)::before{
+            background-image: url('./../img/social/instagram.svg');
+        }
+        &:nth-child(3)::before{
+            background-image: url('./../img/social/Pinterest.svg');
+        }
+        &:nth-child(4)::before{
+            background-image: url('./../img/social/whatsapp.svg');
+        }
+        &:nth-child(5)::before{
+            background-image: url('./../img/social/youtube.svg');
+        }
+    }
+    &__social-link{
+        @include text(14px,600,28px,$textColor);
+    }
+
+
+    &__menu-item{
+        margin-top: 15px;
+        &:nth-child(1){
+            margin-top: 0;
+        }
+    }
+
+    &__menu-link{
+        @include text(14px,600,28px,$textColor);
+    }
+
+
+
+
+    &__bottom{
+        background-color: $colorTitle;
+        text-align: center;
+        padding: 40px 10px;
+        color: $textColorLight;
+    }
+}

@@ -1,0 +1,37 @@
+
+
+$textColor: #5A5A5A;
+$textColorLight: #A1A1A1;
+$bgColorFooter: #DFDFDF;
+$colorTitle: #363838;
+$primaryColor: #FFF;
+
+
+
+
+
+$acentColor: #FD665E;
+
+$secondaryColor: #C7C7C7;
+
+$textColorLight: #585858;
+$linkColor: #5286EC;
+
+
+
+
+%container{
+    padding: 0 15px;
+    margin: 0 auto;
+    width: 1140px;
+    @media screen and (max-width: 1600px) {
+        width: 1200px;
+    }
+    @media screen and (max-width: 1400px) {
+        width: 980px;
+    }
+    @media screen and (max-width: 1200px) {
+        width: 800px;
+    }
+
+}
