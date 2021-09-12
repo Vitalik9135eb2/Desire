@@ -1,0 +1,65 @@
+@import './assets/mixins';
+@import './assets/vars';
+
+
+
+.top{
+    &__container{
+
+    }
+
+    &__inner{
+        position: relative;
+        &::before{
+            position: absolute;
+            content: '';
+            background-image: url('./../img/home/slider/main_slider.jpg');
+            width: 100%;
+            height: 722px;
+            top:0
+        }
+    }
+
+    &__slider{
+        
+    }
+    &__slider-item{
+        display: flex !important;
+        justify-content: center !important;
+        align-items: center !important;
+    }
+
+    &__slider-img{
+        margin-left: -15%;
+        max-width: 703px;
+        max-height: 815px;
+        object-fit: cover;
+    }
+
+    &__slider-content{
+        max-width: 635px;
+        margin-left: 20px;
+    }
+
+    &__slider-title{
+        @include text (110px,800,134px,$colorTitle);
+        font-family: 'Monserat', sans-serif;
+        position: relative;
+        &::before{
+            position: absolute;
+            content: "";
+            width: 185px;
+            height: 1px;
+            background-color: $textColorLight;
+            left: 0;
+            bottom: -15px;
+
+        }
+    }
+
+    &__slider-text{
+        margin-top: 70px;
+        @include text (16px,400,27px,$textColor);
+    }
+
+}

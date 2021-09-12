@@ -1,0 +1,46 @@
+@import './assets/mixins';
+@import './assets/vars';
+
+.blog{
+    margin: 90px 0 100px;
+
+    &__title{
+        text-align: center;
+        @include text (36px,700,51px,$colorTitle);
+        font-family: 'Monserat', sans-serif;
+        max-width: 430px;
+        margin: 0 auto;
+    }
+
+    &__item-wrap{
+        margin-top: 30px;
+        @include flex (flex,row,space-between,center);
+    }
+
+    &__item{
+        max-width: 540px;
+    }
+    &__item-img img{
+        width: 100%;
+        object-fit: cover;
+    }
+
+    &__links{
+        margin-top: 20px;
+    }
+    &__date{
+        @include text(14px,600,28px,$textColor);
+    }
+    &__author{
+        @include text(14px,600,28px,$textColor);
+    }
+    &__theme{
+        @include text(14px,600,28px,$textColor);
+    }
+
+    &__item-title{
+        margin-top: 20px;
+        @include text (24px,700,38px,$colorTitle);
+        font-family: 'Monserat', sans-serif;
+    }
+}

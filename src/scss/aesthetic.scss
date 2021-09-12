@@ -1,0 +1,36 @@
+@import './assets/mixins';
+@import './assets/vars';
+
+
+.aesthetic{
+    margin-top: 105px;
+    padding: 170px 0 155px 0;
+    background-image: url('./../img/Aesthetic.jpg');
+    background-size: cover;
+    max-height: 615px;
+
+    &__inner{
+
+    }
+    &__title{
+        @include text(60px,700,80px,$colorTitle);
+        font-family: "Monserat", sans-serif;
+        max-width: 505px;
+        position: relative;
+        &::before{
+            position: absolute;
+            content: '';
+            width: 200px;
+            height: 1px;
+            background-color: $textColor;
+            bottom: -25px;
+            left: 0;
+        }
+    }
+
+    &__text{
+        margin-top: 50px;
+        max-width: 540px;
+        @include text(16px,400,28px,$colorTitle);
+    }
+}

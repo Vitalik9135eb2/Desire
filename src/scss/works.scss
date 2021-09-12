@@ -1,0 +1,87 @@
+@import './assets/mixins';
+@import './assets/vars';
+
+
+.works{
+    margin-top: 80px;
+    &__inner{
+        @include flex(flex,column,center,center);
+    }
+
+    &__title{
+        @include text (36px,700,51px,$colorTitle);
+        font-family: 'Monserat', sans-serif;
+        margin-bottom: 40px;
+    }
+    &__items{
+        width: 100%;
+    }
+
+
+    &__items-box{
+        display: flex;
+        align-items: flex-end;
+        border-bottom: 2px solid rgba($colorTitle, .7);
+        position: relative;
+        &::before{
+            content: " ";
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            left: 0;
+            bottom: -5px;
+            background-color: $colorTitle;
+        }
+    }
+
+    &__item{
+        @include flex(flex,row,flex-start,center);
+        flex-wrap: wrap;
+        max-width: 250px;
+        height: 100%;
+        position: relative;
+    }
+    &__item--prodution{
+        margin-left: 317px;
+        &::before{
+            content: " ";
+            position: absolute;
+            width: 2px;
+            height: 20px;
+            background-color: rgba($colorTitle, .7);
+            bottom: 0;
+            left: 0;
+
+        }
+    }
+
+    &__item--consultation, &__item--prodution{
+        padding-bottom: 30px;
+    }
+
+    &__item--measurements{
+        margin-left: 305px;
+        padding-top: 30px;
+        position: relative;
+        &::before{
+            content: " ";
+            position: absolute;
+            width: 2px;
+            height: 20px;
+            background-color: rgba($colorTitle, .7);
+            top: 0;
+            left: 0;
+
+        }
+    }
+    &__item-title{
+        @include text(16px,700,23px,$colorTitle);
+        font-family: 'Monserat', sans-serif;
+        margin-left: 13px;
+    }
+    &__item-text{
+        @include text(16px,400,27px,$textColor);
+        margin-top: 15px;
+    }
+}
