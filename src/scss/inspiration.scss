@@ -1,0 +1,88 @@
+@import './assets/mixins';
+@import './assets/vars';
+
+
+.inspiration{
+    margin-top: 100px;
+    position: relative;
+    &::before{
+        position: absolute;
+        content: " ";
+        background-image: url('./../img/about/Object.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: top center;
+        bottom: 0;
+        left: 0;
+        z-index: -1;
+        width: 100%;
+        height: 412px;
+    }
+    &__title{
+        @include text(36px,700,60px,$colorTitle);
+        font-family: 'Monserat', sans-serif;
+        text-align: center;
+        position: relative;
+        &::before{
+            position: absolute;
+            content: '';
+            width: 200px;
+            height: 1px;
+            background-color: $colorTitle;
+            bottom: -20px;
+            left: 31%;
+        }
+    }
+    &__content{
+        @include flex(flex,row,center,flex-start);
+        padding-bottom: 20px;
+        margin-top: -25px;
+    }
+
+    &__img{
+        margin-left: -12%;
+        width: 430px;
+        height: 505px;
+    }
+    &__info{
+        margin-left: 90px;
+        margin-top: 80px;
+    }
+    &__text{
+        @include text (16px,400,27px,$textColor);
+
+    }
+    &__list{
+        margin-top: 40px;
+    }
+    &__list-item{
+        margin-top: 25px;
+    }
+    &__list-item--info{
+        @include flex (flex,row,space-between,center);
+    }
+    &__list-item--info span{
+        @include text (16px,700,23px,$colorTitle);
+        font-family: 'Monserat', sans-serif;
+    }
+    &__list-item--progres-wrap{
+        width: 100%;
+        height: 2px;
+        background-color: #fff;
+        margin-top: 15px;
+    }
+    &__list-item--progres{
+        background-color: $colorTitle;
+        width: 80%;
+        height: 2px;
+    }
+    &__list-item:nth-child(2) .inspiration__list-item--progres{
+        width: 70%;
+    }
+    &__list-item:nth-child(3) .inspiration__list-item--progres{
+        width: 75%;
+    }
+    &__list-item:nth-child(4) .inspiration__list-item--progres{
+        width: 40%;
+    }
+}

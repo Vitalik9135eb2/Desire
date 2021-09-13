@@ -19,12 +19,16 @@ button{background-color: #fff;}
 
 @import './assets/mixins';
 @import './assets/vars';
+@import './jquery.fancybox.scss';
 @import './libs.scss';
 
 body{
 
     font-family: 'Open Sans', sans-serif;
     @include text(16px,400,22px,$textColor);
+}
+.main{
+    margin-top: 120px;
 }
 .container{
     @extend %container;
@@ -52,7 +56,43 @@ body{
 }
 
 
+.bread__crumbs{
+    padding: 15px 0;
+    &-item{
+        @include text (14px,400,28px,$textColor);
+        position: relative;
+        margin-right: 10px;
+        &::before{
+            position: absolute;
+            content: "";
+            width: 2px;
+            height: 18px;
+            top: 2px;
+            left: -12px;
+            background-color: $textColor;
+            transform: skew(-10deg);
+        }
+    }
+    &-item:first-child{
+        &::before{
+            display: none;
+        }
+    }
+    &__pages{
+        background-color: $bgColorFooter;
+    }
+}
+
+
+
+
+
+
+
+
 @import './header.scss';
+
+//** home page *//
 @import './top.scss';
 @import './newColection.scss';
 @import './aesthetic.scss';
@@ -60,6 +100,10 @@ body{
 @import './gallary.scss';
 @import './blog.scss';
 
+/** about page */
+@import './about.scss';
+@import './inspiration.scss';
+@import './partners.scss';
 
 
 @import './footer.scss';

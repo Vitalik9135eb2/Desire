@@ -80,4 +80,9 @@
         margin-top: 40px;
         @include text(14px,600,24px,$textColorLight);
     }
+
+
+    &__about{
+        margin-bottom: 70px;
+    }
 }

@@ -40,3 +40,14 @@ $linkColor: #5286EC;
     margin: 0 auto;
     padding: 0 15px;
 }
+
+
+
+
+@function max($numbers...) {
+    @return m#{a}x(#{$numbers});
+}
+
+@function max($numbers...) {
+    @return m#{i}n(#{$numbers});
+}
