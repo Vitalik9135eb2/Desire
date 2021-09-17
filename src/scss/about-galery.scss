@@ -1,0 +1,24 @@
+@import './assets/mixins';
+@import './assets/vars';
+
+
+
+
+.about-gellary{
+    margin-top: 100px;
+    margin-bottom: 145px;
+}
+.about-gellary__slider-item{
+    display: flex !important;
+    margin-bottom: 40px;
+}
+
+.collection__item-about{
+    width: 170px;
+    height: 170px;
+}
+.collection__title-about{
+font-size: 16px;
+text-align: center;
+&::before{display: none;}
+}

@@ -1,0 +1,14 @@
+@import './assets/mixins';
+@import './assets/vars';
+
+.map__wrap{
+    height: 570px !important;
+    z-index: -1;
+    margin-top: -55px;
+}
+.map{
+
+    height:100%;
+    width:100%;
+
+}

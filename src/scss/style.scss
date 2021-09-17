@@ -81,6 +81,9 @@ body{
     &__pages{
         background-color: $bgColorFooter;
     }
+    &__pages-contact{
+       opacity: .5;
+    }
 }
 
 
@@ -105,5 +108,12 @@ body{
 @import './inspiration.scss';
 @import './partners.scss';
 
+/**blog-page*/
+@import './blog_page.scss';
+
+/** contact page*/
+@import './map.scss';
+@import './contact.scss';
+@import './about-galery.scss';
 
 @import './footer.scss';

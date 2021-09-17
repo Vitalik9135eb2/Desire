@@ -1,0 +1,91 @@
+@import './assets/mixins';
+@import './assets/vars';
+
+.contact{
+    margin-top: 55px;
+
+    &__inner{
+        @include flex (flex,column,center,flex-end);
+    }
+
+    &__title{
+        @include text (36px,700,60px,$colorTitle);
+        font-family: 'Monserat',sans-serif;
+        align-self: flex-start;
+        position: relative;
+        &::before{
+            position: absolute;
+            content: " ";
+            width: 200px;
+            height: 1px;
+            background-color: $colorTitle;
+            bottom: -15px;
+            left: 0;
+        }
+    }
+    &__info{
+        margin-top: 60px;
+        max-width: 830px;
+    }
+    &__list{
+        display: flex;
+    }
+    &__list-item{
+        margin-right: 35px;
+    }
+    &__list-item:last-child{
+        margin-right: 0;
+    }
+    &__text{
+        margin-top: 20px;
+        @include text (16px,400,28px,$textColorLight);
+    }
+
+    &__details{
+        margin-top: 15px;
+    }
+    &__detail{
+        display: block;
+        @include text (16px,400,27px,$textColor);
+    }
+    &__detail-email{
+        margin-top: 15px;
+        color: $colorTitle;
+    }
+    &__form{
+        margin-top: 25px;
+    }
+    &__input-wrap{
+        display: flex;
+    }
+    &__form-input{
+        border: 1px solid $textColorLight;
+        border-radius: 24px;
+        height: 40px;
+        padding-left: 20px;
+        width: 100%;
+    }
+    &__form-input:first-child{
+        margin-right: 10px;
+    }
+    &__form-input:focus{
+        box-shadow: 0 4px rgba(0, 0, 0, 0.25);
+    }
+    &__form-textarea{
+        border-radius: 24px;
+        margin-top: 15px;
+        resize: none;
+        min-width: 100%;
+        min-height: 125px;
+        border: 1px solid $textColorLight;
+        padding: 14px 0 0 16px;
+    }
+    &__form-btn{
+        margin-top: 20px;
+        background-color: $colorTitle;
+        @include text (16px,400,28px,#fff);
+        border-radius: 24px;
+        width: 180px;
+        height: 40px;
+    }
+}

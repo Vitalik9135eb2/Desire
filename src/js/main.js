@@ -16,6 +16,15 @@ $(function(){
         autoplay: true
     })
 
+    $('.about-gellary__slider').slick({
+        dots: true,
+        arrows: false,
+        fade: true,
+        autoplay: true
+    })
+
+    
+
     var mixer = mixitup('.gallary__inner', {
         load: {
             filter: '.living'
