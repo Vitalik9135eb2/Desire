@@ -23,6 +23,10 @@ $(function(){
         autoplay: true
     })
 
+    $('.article-slider__box').slick({
+        prevArrow: '<button type="button" class="article-slider__arrow article-slider__arrowLeft"><img src="./img/blog-page/Path.svg" alt="arrow next"></button>',
+        nextArrow: '<button type="button" class="article-slider__arrow article-slider__arrowRight"><img src="./img/blog-page/next-slide.svg" alt="arrow back"></button>'
+    })
     
 
     var mixer = mixitup('.gallary__inner', {

@@ -2,91 +2,175 @@
 @import './assets/vars';
 
 
-.blog-page{
-    margin-top: 60px;
-    &__inner{
-        display: flex;
-    }
-    &__content{
-        min-width: 730px;
-    }
-}
+.blog-one {
+    &__text {
 
+        p {
+            margin-bottom: 40px;
+            @include text(16px, 400, 27px, $textColor);
+        }
 
-.aside{
-    margin-left: 30px;
-    width: 100%;
-    &__searh-input{
-        border-radius:25px;
-        width: 100%;
-        height: 40px;
-        padding: 6px 18px;
-        border: 1px solid $textColor;
-        &::placeholder{
-            @include text (14px,400,28px,$textColor);
+        blockquote {
+            @include text(24px, 300, 38px, $textColorLight);
+            font-style: italic;
+            padding: 0 42px;
+            margin-bottom: 30px;
         }
     }
-    &__category{
-        margin-top: 45px;
-    }
-    &__title{
-        @include text (16px,700,23px,$colorTitle);
-        font-family: 'Monserat', sans-serif;
-    }
-    &__category-list{
-        margin-top: 15px;
-    }
-    &__category-item{
-        margin-top: 10px;
-        &:nth-child(1){
-            margin-top: 0;
-        }
-    }
-    &__category-link{
-        @include text (16px,400,27px,$textColor);
-    }
 
-    &__recent-posts{
-        margin-top: 50px;
-    }
-    &__resen-post__list{
-        margin-top: 25px;
-    }
-    &__resent-post__item{
-        margin-top: 15px;
-    }
-    &__resent-post__title{
+    &__author {
         display: block;
-        @include text (16px,400,27px,$textColor);
-    }
-    &__resent-post__date, &__resent-post__author{
-        @include text (14px,400,28px,$textColorLight);
+        margin-top: 47px;
+        @include text(16px, 700, 23px, $textColor);
+        font-style: normal;
+        position: relative;
+
+        &::before {
+            position: absolute;
+            content: "";
+            width: 177px;
+            height: 1px;
+            background-color: #6D7278;
+            left: 0;
+            top: -23px;
+        }
     }
 
-    &__tags{
-        margin-top: 50px;
+    &__tags {
+        margin-bottom: 40px;
     }
 
-    &__tags-wrap{
-        @include flex (flex,row,flex-start,center);
-        flex-wrap: wrap;
-        margin-top: 10px;
+    &__tags-title {
+        @include text(20px, 700, 31px, $colorTitle);
+        margin-bottom: 18px;
     }
-    &__tags-link{
-        @include text (14px,600,28px,#8F8D8D);
-        border: 1px solid #454647;
-        border-radius: 14px;
-        padding: 0 16px;
-        margin: 10px 10px 0 0;
-    }
-    &__social{
-        margin-top: 60px;
-        @include flex (flex,row,flex-start,center);
-    }
-    &__social-item{
-        margin-right: 20px;
-        &:last-child{
+
+    &__tags-link {
+        border: 1px solid $linkColorGrey;
+        border-radius: 24px;
+        @include text(14px, 600, 28px, $linkColorGrey);
+        padding: 5px 16px;
+        margin-right: 23px;
+
+        &:last-child {
             margin-right: 0;
         }
+    }
+
+    &__links {
+        border-top: 1px solid $bgColorFooter;
+        border-bottom: 1px solid $bgColorFooter;
+        padding: 40px 33px 33px;
+        @include flex(flex,row,space-between,center);
+        margin-bottom: 35px;
+    }
+    &__link{
+        display: block;
+        @include text(14px, 600, 28px, #707070);
+        max-width: 240px;
+        position: relative;
+        &::before{
+            position: absolute;
+            content: "";
+            width: 12px;
+            height: 23px;
+            top: 50%;
+            transform: translateY(-50%);
+            background-repeat: no-repeat;
+            background-size: 100%;
+        }
+    }
+    &__link-prev {
+        padding-left: 44px;
+        text-align: left;
+        &::before{
+            background-image: url('./../img/blog-page/links-prev.svg');
+            left: 0;
+        }
+    }
+    &__link-next{
+        text-align: right;
+        padding-right: 44px;
+        &::before{
+            background-image: url('./../img/blog-page/links-next.svg');
+            right: 0;
+        }
+    }
+
+    &__coments{
+        margin-bottom: 40px;
+    }
+    &__coments-title{
+        @include text(20px,700,31px,$colorTitle);
+        margin-bottom: 20px;
+    }
+    &__coments-items{
+        @include flex(flex,row,space-between,flex-start);
+    }
+    &__coments-avatar{
+        width: 64px;
+        height: 64px;
+        object-fit: cover;
+        border-radius: 50%;
+        margin-right: 13px;
+    }
+    &__coments-name{
+        @include text(16px,700,23px,$colorTitle);
+    }
+    &__coments-date{
+        margin-bottom: 40px;
+        @include text(14px,700,28px,$textColorLight);
+    }
+    &__coments-text{
+
+    }
+    &__reply{
+        margin-left: 5px;
+    }
+
+    &__form{
+        @include flex(flex,column,flex-start,flex-start)
+    }
+    &__form-title{
+        margin-bottom: 25px;
+        @include text(16px,700,23px,$colorTitle);
+    }
+
+    &__form-textarea{
+        border: 1px solid $bgColorFooter;
+        min-width: 100%;
+        border-radius: 24px;
+        padding: 14px 27px;
+        resize: none;
+        margin-bottom: 12px;
+        min-height: 125px;
+        &::placeholder{
+            @include text(16px,400,27px,$textColorLight);
+        }
+    }
+    &__input-wrap{
+        display: flex;
+        width: 100%;
+    }
+    &__form-input{
+        border: 1px solid $bgColorFooter;
+        border-radius: 20px;
+        padding: 6px 17px;
+        width: 43%;
+        margin-bottom: 20px;
+        margin-right: 10px;
+        &::placeholder{
+            @include text(16px,400,27px,$textColorLight);
+        }
+    }
+    &__form-label{
+        @include text(16px,400,27px,$textColorLight);
+        margin-bottom: 20px;
+    }
+    &__form-btn{
+        background-color: $colorTitle;
+        border-radius: 24px;
+        padding: 6px 60px;
+        @include text(16px,600,28px,$primaryColor);
     }
 }
