@@ -5,6 +5,9 @@
 
 .newColection{
     margin-top: 120px;
+    @media (max-width: 1400.98px){
+        margin-top: 60px;
+    }
 
     &__inner{
         @include flex(flex,column,center,center);
@@ -39,10 +42,18 @@
     &__item{
         cursor: pointer;
         display: block;
-        width: 350px;
+        max-width: 350px;
         height: 350px;
         margin: 0 15px;
         position: relative;
+        @media (max-width: 1600.98px){
+            height: 250px;
+            margin: 0 10px;
+        }
+        @media (max-width: 1400.98px){
+            height: 210px;
+            margin: 0 5px;
+        }
     }
     &__img{
         width: 100%;

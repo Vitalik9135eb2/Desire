@@ -5,7 +5,9 @@
 
 .top{
     &__container{
-
+        @media (max-width: 1600.98px){
+            width: 100%;
+        }
     }
 
     &__inner{
@@ -16,7 +18,17 @@
             background-image: url('./../img/home/slider/main_slider.jpg');
             width: 100%;
             height: 722px;
-            top:0
+            top:0;
+            @media (max-width: 1399.98px){
+                height: 490px;
+            }
+            @media (max-width: 992.98px){
+                height: 340px;
+            }
+            @media (max-width: 768.98px){
+                height: 295px;
+            }
+            
         }
     }
 
@@ -27,6 +39,9 @@
         display: flex !important;
         justify-content: center !important;
         align-items: center !important;
+        @media (max-width: 576.98px){
+            flex-direction: column !important;
+        }
     }
 
     &__slider-img{
@@ -34,17 +49,41 @@
         max-width: 703px;
         max-height: 815px;
         object-fit: cover;
+        @media (max-width: 1399.98px){
+            margin-left: 0;
+            max-width: 430px;
+        }
+        @media (max-width: 992.98px){
+            max-width: 300px;
+        }
+        @media (max-width: 768.98px){
+            max-width: 260px;
+        }
+        
     }
 
     &__slider-content{
         max-width: 635px;
         margin-left: 20px;
+        @media (max-width: 576.98px){
+            margin-top: 20px;
+            text-align: center;
+        }
     }
 
     &__slider-title{
         @include text (110px,800,134px,$colorTitle);
         font-family: 'Monserat', sans-serif;
         position: relative;
+        @media (max-width: 1399.98px){
+            @include text (90px,800,90px,$colorTitle);
+        }
+        @media (max-width: 992.98px){
+            font-size: 75px;
+        }
+        @media (max-width: 768.98px){
+            @include text (40px,800,40px,$colorTitle);
+        }
         &::before{
             position: absolute;
             content: "";
@@ -53,6 +92,9 @@
             background-color: $textColorLight;
             left: 0;
             bottom: -15px;
+            @media (max-width: 576.98px){
+                display: none;
+            }
 
         }
     }
@@ -60,6 +102,18 @@
     &__slider-text{
         margin-top: 70px;
         @include text (16px,400,27px,$textColor);
+        @media (max-width: 992.98px){
+            margin-top: 50px;
+        }
+        @media (max-width: 768.98px){
+            @include text (14px,400,19px,$textColor);
+        }
+        @media (max-width: 576.98px){
+            margin-top: 30px;
+        }
     }
 
+}
+.slick-dots{
+    margin-top: 20px !important;
 }

@@ -4,10 +4,7 @@
 
 
 .footer{
-    // position: fixed;
-    // bottom: 0;
-    // right: 0;
-    // left: 0;
+
     &__top{
         background-color: $bgColorFooter;
     }
@@ -15,10 +12,20 @@
     &__inner{
         @include flex(flex,row,space-between,center);
         padding: 60px 0 80px;
+        @media (max-width: 575.98px){
+            flex-direction: column;
+        }
     }
 
     &__left{
         width: 540px;
+        @media (max-width: 1199.98px){
+            width: 410px;
+        }
+        @media (max-width: 575.98px){
+            width: 320px;
+            padding: 0 10px;
+        }
     }
     &__left-title{
         font-family: "Monserat", sans-serif;
@@ -28,6 +35,9 @@
     &__left-text{
         @include text(16px,400,27px,$textColor);
         margin-top: 15px;
+        @media (max-width: 575.98px){
+            width: 320px;
+        }
     }
 
     &__left-email{
@@ -52,6 +62,9 @@
     &__form{
         margin-top: 25px;
         display: flex;
+        @media (max-width: 992.98px){
+            flex-wrap: wrap;
+        }
     }
 
     &__form-input{
@@ -74,16 +87,29 @@
         color: $primaryColor;
         padding: 5px 10px;
         min-width: 160px;
+        @media (max-width: 1199.98px){
+            min-width: 110px;
+        }
+        @media (max-width: 992.98px){
+            margin-top: 20px;
+            padding: 5px 15px;
+        }
     }
 
 
 
     &__right{
         @include flex(flex,row,center,flex-start);
+        @media (max-width: 575.98px){
+            margin-top: 30px;
+        }
     }
 
     &__social{
         margin-right: 185px;
+        @media (max-width: 575.98px){
+            margin-right: 40px;
+        }
     }
 
     &__socil-item{

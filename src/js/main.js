@@ -8,6 +8,16 @@ $(function(){
 
 
 
+    $('.header__btn-menu').click(function(event){
+        $('.menu-left').toggleClass("active");
+        $('.menu-right').toggleClass("active");
+    });
+    $('.menu__close').click(function(event){
+        $('.menu').removeClass("active");
+    });
+
+
+
 
     $('.top__slider').slick({
         dots: true,

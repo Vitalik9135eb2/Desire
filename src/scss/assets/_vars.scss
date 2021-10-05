@@ -29,10 +29,19 @@ $linkColor: #5286EC;
         width: 1200px;
     }
     @media screen and (max-width: 1400px) {
-        width: 980px;
+        width: 1100px;
     }
     @media screen and (max-width: 1200px) {
-        width: 800px;
+        width: 900px;
+    }
+    @media screen and (max-width: 992px) {
+        width: 730px;
+    }
+    @media screen and (max-width: 768px) {
+        width: 90%;
+    }
+    @media screen and (max-width: 576px) {
+        width: 80%;
     }
 }
 
