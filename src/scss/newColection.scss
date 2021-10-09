@@ -8,6 +8,9 @@
     @media (max-width: 1400.98px){
         margin-top: 60px;
     }
+    @media (max-width: 992.98px){
+        margin-top: 40px;
+    }
 
     &__inner{
         @include flex(flex,column,center,center);
@@ -39,6 +42,10 @@
 .collection{
     @include flex (flex,row,space-between,center);
     margin-top: 55px;
+    @media (max-width: 768.98px){
+        flex-wrap: wrap;
+        justify-content: center;
+    }
     &__item{
         cursor: pointer;
         display: block;
@@ -52,7 +59,12 @@
         }
         @media (max-width: 1400.98px){
             height: 210px;
-            margin: 0 5px;
+        }
+        @media (max-width: 992.98px){
+            height: 175px;
+        }
+        @media (max-width: 768.98px){
+            margin-bottom: 15px;
         }
     }
     &__img{
@@ -77,6 +89,10 @@
         @include text(20px,700,24px,$colorTitle);
         font-family: 'Monserat', sans-serif;
         position: relative;
+        @media (max-width: 992.98px){
+            font-size: 18px;
+            padding-left: 5px;
+        }
         &::before{
             content: "";
             position: absolute;
@@ -85,11 +101,18 @@
             background-color: $textColorLight;
             bottom: -20px;
             left: 0;
+            @media (max-width: 992.98px){
+                width: 100px;
+                left: 5px;
+            }
         }
     }
     &__text{
         margin-top: 40px;
         @include text(14px,600,24px,$textColorLight);
+        @media (max-width: 992.98px){
+            padding-left: 5px;
+        }
     }
 
 

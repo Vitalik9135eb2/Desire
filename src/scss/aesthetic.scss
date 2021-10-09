@@ -8,15 +8,33 @@
     background-image: url('./../img/Aesthetic.jpg');
     background-size: cover;
     max-height: 615px;
-
-    &__inner{
-
+    @media (max-width: 1600.98px){
+        padding: 130px 0 115px 0;
+        margin-top: 60px;
     }
+    @media (max-width: 768.98px){
+        margin-top: 50px;
+        padding: 90px 0 80px;
+    }
+
     &__title{
         @include text(60px,700,80px,$colorTitle);
         font-family: "Monserat", sans-serif;
         max-width: 505px;
         position: relative;
+        @media (max-width: 768.98px){
+            font-size: 55px;
+            line-height: 70px;
+        }
+        @media (max-width: 576.98px){
+            font-size: 45px;
+            line-height: 50px;
+        }
+        @media (max-width: 460.98px){
+            font-size: 34px;
+            line-height: 40px;
+        }
+        
         &::before{
             position: absolute;
             content: '';
@@ -32,5 +50,10 @@
         margin-top: 50px;
         max-width: 540px;
         @include text(16px,400,28px,$colorTitle);
+        @media (max-width: 460.98px){
+            margin-top: 40px;
+            font-size: 14px;
+            line-height: 23px;
+        }
     }
 }
