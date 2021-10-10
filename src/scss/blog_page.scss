@@ -4,6 +4,9 @@
 
 .blog-page{
     margin-top: 60px;
+    @media (max-width: 1600.98px){
+        margin-top: 30px;
+    }
     &__inner{
         display: flex;
     }
@@ -39,6 +42,7 @@
         @include text (24px,300,38px,$colorTitle);
         font-style: italic;
         text-align: center;
+        
     }
     &__blockquote-text{
         display: block;

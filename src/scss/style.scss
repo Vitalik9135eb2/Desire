@@ -29,6 +29,9 @@ body{
 }
 .main{
     margin-top: 120px;
+    @media (max-width: 1600.98px){
+        margin-top: 80px;
+    }
 }
 .container{
     @extend %container;

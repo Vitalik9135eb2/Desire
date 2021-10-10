@@ -3,13 +3,33 @@
 
 .partners{
     margin-top: 70px;
+    @media (max-width: 1600.98px){
+        margin-top: 40px;
+    }
     &__items{
         @include flex (flex,row,space-between,center);
+        @media (max-width: 576.98px){
+            flex-wrap: wrap;
+            justify-content: center;
+        }
     }
     &__item{
         margin: 0 30px;
         width: 289px;
         height: 289px;
+        @media (max-width: 1600.98px){
+            margin: 0 15px;
+            width: 220px;
+            height: 220px;
+        }
+        @media (max-width: 1200.98px){
+            height: 150px;
+        }
+        @media (max-width: 768.98px){
+            height: 75px;
+            width: 75px;
+        }
+        
     }
     &__item-img{
         width: 100%;

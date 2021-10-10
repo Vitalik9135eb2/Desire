@@ -12,6 +12,9 @@
     &__inner{
         @include flex(flex,row,space-between,center);
         padding: 60px 0 80px;
+        @media (max-width: 1600.98px){
+            padding: 30px 0 40px;
+        }
         @media (max-width: 575.98px){
             flex-direction: column;
         }
@@ -107,7 +110,7 @@
 
     &__social{
         margin-right: 185px;
-        @media (max-width: 575.98px){
+        @media (max-width: 768.98px){
             margin-right: 40px;
         }
     }
@@ -167,5 +170,9 @@
         text-align: center;
         padding: 40px 10px;
         color: $textColorLight;
+        @media (max-width: 1600.98px){
+            padding: 10px 5px;
+            font-size: 12px;
+        }
     }
 }

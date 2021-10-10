@@ -15,17 +15,43 @@
         text-align: center;
         font-family: 'Monserat',sans-serif;
         padding: 105px 0 160px;
+        @media (max-width: 768.98px){
+            padding: 20px 0 70px;
+            font-size: 50px;
+            line-height: 70px;
+        }
     }
 
     &__text-wrap{
         margin-top: 130px;
         @include flex (flex,column,center,flex-start);
+        @media (max-width: 1600.98px){
+            margin-top: 60px;
+        }
     }
     &__text-title{
         @include text (36px,700,60px,$colorTitle);
         font-family: 'Monserat',sans-serif;
         max-width: 820px;
         position: relative;
+        @media (max-width: 1600.98px){
+            font-size: 30px;
+            line-height: 45px;
+            max-width: 700px;
+        }
+        @media (max-width: 992.98px){
+            font-size: 22px;
+            line-height: 30px;
+            max-width: 470px;
+        }
+        @media (max-width: 768.98px){
+            max-width: 400px;
+            font-size: 18px;
+        }
+        @media (max-width: 576.98px){
+            font-size: 14px;
+            line-height: 18px;
+        }
         &::before{
             position: absolute;
             content: " ";
@@ -34,6 +60,9 @@
             background-color: $textColor;
             bottom: -30px;
             left: 0;
+            @media (max-width: 768.98px){
+                bottom: -10px;
+            }
         }
     }
     &__text{
@@ -41,6 +70,19 @@
         @include text (16px,400,27px,$textColor);
         max-width: 820px;
         align-self: flex-end;
+        @media (max-width: 992.98px){
+            max-width: 630px;
+            font-size: 14px;
+            line-height: 24px;
+        }
+        @media (max-width: 768.98px){
+            max-width: 500px;
+            margin-top: 25px;
+        }
+        @media (max-width: 576.98px){
+            font-size: 10px;
+            line-height: 16px;
+        }
     }
 
     &__popup{
@@ -51,5 +93,12 @@
         background-position: top center;
         height: 415px;
         @include flex (flex,row,center,center);
+        @media (max-width: 1600.98px){
+            margin-top: 60px;
+        }
+        @media (max-width: 992.98px){
+            margin-top: 40px;
+            height: 220px;
+        }
     }
 }

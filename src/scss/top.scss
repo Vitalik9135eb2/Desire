@@ -19,8 +19,12 @@
             width: 100%;
             height: 722px;
             top:0;
-            @media (max-width: 1399.98px){
+            
+            @media (max-width: 1600.98px){
                 height: 490px;
+            }
+            @media (max-width: 1400.98px){
+                height: 430px;
             }
             @media (max-width: 992.98px){
                 height: 340px;
@@ -49,6 +53,9 @@
         max-width: 703px;
         max-height: 815px;
         object-fit: cover;
+        @media (max-width: 1600.98px){
+            max-width: 510px;
+        }
         @media (max-width: 1399.98px){
             margin-left: 0;
             max-width: 430px;
@@ -75,8 +82,8 @@
         @include text (110px,800,134px,$colorTitle);
         font-family: 'Monserat', sans-serif;
         position: relative;
-        @media (max-width: 1399.98px){
-            @include text (90px,800,90px,$colorTitle);
+        @media (max-width: 1600.98px){
+            @include text (85px,800,90px,$colorTitle);
         }
         @media (max-width: 992.98px){
             font-size: 75px;
@@ -116,4 +123,7 @@
 }
 .slick-dots{
     margin-top: 20px !important;
+    @media (max-width: 1600.98px){
+        margin-top: 0 !important;
+    }
 }

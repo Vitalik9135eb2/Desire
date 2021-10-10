@@ -5,9 +5,17 @@
     height: 570px !important;
     z-index: -1;
     margin-top: -55px;
+    @media (max-width: 1600.98px){
+        height: 500px !important;
+    }
+    @media (max-width: 768.98px){
+        height: 400px !important;
+    }
+    @media (max-width: 576.98px){
+        height: 300px !important;
+    }
 }
 .map{
-
     height:100%;
     width:100%;
 
