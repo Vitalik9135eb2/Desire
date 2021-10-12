@@ -1,7 +1,10 @@
 @import './assets/mixins';
 @import './assets/vars';
 
-
+.container-blog{
+    display: flex;
+    justify-content: space-between;
+}
 .blog-page{
     margin-top: 60px;
     @media (max-width: 1600.98px){
@@ -9,15 +12,40 @@
     }
     &__inner{
         display: flex;
+        @media (max-width: 768.98px){
+            justify-content: center;
+        }
     }
     &__content{
         max-width: 730px;
+        @media (max-width: 1200.98px){
+            max-width: 650px;
+        }
+        @media (max-width: 992.98px){
+            max-width: 520px;
+        }
+        @media (max-width: 768.98px){
+            max-width: 550px;
+        }
+        @media (max-width: 578.98px){
+            max-width: 390px;
+        }
+        @media (max-width: 415.98px){
+            max-width: 305px;
+        }
+    
     }
     &__item{
         margin-bottom: 80px;
+        @media (max-width: 1600.98px){
+            margin-bottom: 60px;
+        }
+        @media (max-width: 576.98px){
+            margin-bottom: 20px;
+        }
     }
     &__item-img{
-        max-width: 730px;
+        width: 100%;
         max-height: 420px;
     }
     &__item-info{
@@ -26,13 +54,26 @@
         a{
             color: inherit;
         }
+        @media (max-width: 576.98px){
+            padding: 5px 0;
+            font-size: 10px;
+            line-height: 15px;
+        }
     }
     &__item-title{
         @include text (24px,600,34px,$colorTitle);
         margin-bottom: 6px;
+        @media (max-width: 576.98px){
+            font-size: 14px;
+            line-height: 20px;
+        }
     }
     &__item-text{
         @include text (16px,400,27px,$textColor);
+        @media (max-width: 576.98px){
+            font-size: 12px;
+            line-height: 18px;
+        }
     }
 
     &__blockquote{
@@ -42,13 +83,21 @@
         @include text (24px,300,38px,$colorTitle);
         font-style: italic;
         text-align: center;
-        
+        @media (max-width: 576.98px){
+            padding: 15px 50px;
+            margin-bottom: 30px;
+        }
     }
     &__blockquote-text{
         display: block;
         color: $textColorLight;
         margin-bottom: 47px;
         position: relative;
+        @media (max-width: 576.98px){
+            font-size: 14px;
+            line-height: 30px;
+            margin-bottom: 30px;
+        }
         &::after{
             position: absolute;
             content: " ";
@@ -57,6 +106,14 @@
             height: 1px;
             bottom: -20px;
             left: 34%;
+            @media (max-width: 576.98px){
+                left: 20%;
+            }
+        }
+    }
+    &__blockquote-author{
+        @media (max-width: 576.98px){
+            font-size: 16px;
         }
     }
     &__item-popup{
@@ -89,6 +146,9 @@
 .pagination{
     @include flex(flex,row,center,center);
     margin-bottom: 60px;
+    @media (max-width: 576.98px){
+        margin-bottom: 20px;
+    }
     &__arrow{
         margin: 0 6px;
     }
@@ -110,31 +170,80 @@
         color:$colorTitle;
     }
 }
+.aside__btn-open{
+    display: none;
+    @media (max-width: 768.98px){
+        display: block;
+    }
+}
+.aside.active{
+    right: 0;
+    top: 85px;
+    z-index: 9999;
+    border-left: 1px solid #000;
+    border-top: 1px solid #000;
+    border-bottom: 1px solid #000;
+    background-color: #fff;
+    padding-left: 20px;
+    padding-top: 20px;
+    width: 300px;
+    transition: .5s;
+    padding: 20px 25px 20px;
+    @media (max-width: 380.98px){
+        padding: 10px 15px 10px;
+        margin-left: 0;
+    }
+    
+}
 .aside{
     margin-left: 30px;
     width: 100%;
+    transition: .5s;
+    @media (max-width: 992.98px){
+        margin-left: 10px;
+    }
+    @media (max-width: 768.98px){
+        position: absolute;
+        right: -1000px;
+        top: 85px;
+    }
+
+
     &__searh-input{
         border-radius:25px;
         width: 100%;
         height: 40px;
-        padding: 6px 18px;
+        
         border: 1px solid $textColor;
         &::placeholder{
             @include text (14px,400,28px,$textColor);
+            padding: 6px 18px;
+        }
+        @media (max-width: 992.98px){
+            padding: 6px 10px;
         }
     }
     &__category{
         margin-top: 45px;
+        @media (max-width: 768.98px){
+            margin-top: 15px;
+        }
     }
     &__title{
         @include text (16px,700,23px,$colorTitle);
         font-family: 'Monserat', sans-serif;
+        @media (max-width: 768.98px){
+            line-height: 15px;
+        }
     }
     &__category-list{
         margin-top: 15px;
     }
     &__category-item{
         margin-top: 10px;
+        @media (max-width: 768.98px){
+            margin-top: 5px;
+        }
         &:nth-child(1){
             margin-top: 0;
         }
@@ -145,9 +254,15 @@
 
     &__recent-posts{
         margin-top: 50px;
+        @media (max-width: 768.98px){
+            margin-top: 25px;
+        }
     }
     &__resen-post__list{
         margin-top: 25px;
+        @media (max-width: 768.98px){
+            margin-top: 10px;
+        }
     }
     &__resent-post__item{
         margin-top: 15px;

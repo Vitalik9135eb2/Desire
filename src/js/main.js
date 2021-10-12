@@ -16,6 +16,10 @@ $(function(){
         $('.menu').removeClass("active");
     });
 
+    $('.aside__btn-open').click(function(event){
+        $('.aside').toggleClass("active");
+    });
+
 
 
 
@@ -45,4 +49,10 @@ $(function(){
             filter: '.living'
         }
     });
+
+
+
+
+
+    
 })
