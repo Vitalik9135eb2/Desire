@@ -20,6 +20,10 @@ $(function(){
         $('.aside').toggleClass("active");
     });
 
+    $('.header__btn-menu').click(function(event){
+        $('.menu__list').toggleClass("active");
+    });
+
 
 
 

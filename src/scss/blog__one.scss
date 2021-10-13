@@ -51,7 +51,11 @@
         @include text(14px, 600, 28px, $linkColorGrey);
         padding: 5px 16px;
         margin-right: 23px;
-
+        @media (max-width: 992.98px){
+            margin-right: 5px;
+            margin-top: 10px;
+            display: inline-block;
+        }
         &:last-child {
             margin-right: 0;
         }
@@ -69,6 +73,11 @@
         @include text(14px, 600, 28px, #707070);
         max-width: 240px;
         position: relative;
+        @media (max-width: 576.98px){
+            max-width: 125px;
+            line-height: 20px;
+            font-size: 12px;
+        }
         &::before{
             position: absolute;
             content: "";
@@ -83,6 +92,9 @@
     &__link-prev {
         padding-left: 44px;
         text-align: left;
+        @media (max-width: 576.98px){
+            padding-left: 25px;
+        }
         &::before{
             background-image: url('./../img/blog-page/links-prev.svg');
             left: 0;
@@ -91,6 +103,9 @@
     &__link-next{
         text-align: right;
         padding-right: 44px;
+        @media (max-width: 576.98px){
+            padding-right:25px;
+        }
         &::before{
             background-image: url('./../img/blog-page/links-next.svg');
             right: 0;

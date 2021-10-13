@@ -172,6 +172,7 @@
 }
 .aside__btn-open{
     display: none;
+    background-color: inherit;
     @media (max-width: 768.98px){
         display: block;
     }
