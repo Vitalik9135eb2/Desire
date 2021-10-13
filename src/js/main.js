@@ -21,9 +21,18 @@ $(function(){
     });
 
     $('.header__btn-menu').click(function(event){
-        $('.menu__list').toggleClass("active");
-    });
+        $('.menu').toggleClass("active");
 
+        if($('.menu').hasClass("active")){
+            $('.header__btn-menu--close').css('display', 'block');
+            $('.header__btn-menu--open').css('display', 'none');
+        }
+    
+        else{
+            $('.header__btn-menu--close').css('display', 'none');
+            $('.header__btn-menu--open').css('display', 'block')
+        }
+    });
 
 
 
